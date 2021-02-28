@@ -8,4 +8,6 @@ COPY requirements.txt /requirements.txt
 
 RUN pip3 install -r requirements.txt
 
-RUN Rscript -e "install.packages('data.table')"
+RUN Rscript -e "install.packages('renv')"
+
+RUN Rscript -e "renv::restore()"
